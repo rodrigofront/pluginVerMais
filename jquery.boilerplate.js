@@ -66,16 +66,12 @@
       }
       else {
         $("."+boxes+"").slice(start , end).show();
-        $("."+link+"").hide();
+        $("."+link+"").hide(); 
       }
       
      start += qtdTotal
      end += qtdTotal
-     console.log(start,end);
-     
-     console.log(clicks);
-    
-    });
+      });
     };
 
     // Um invólucro realmente leve em torno do construtor,
