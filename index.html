@@ -5,10 +5,12 @@
 	<title></title>
 	<link rel="stylesheet" href="main.css">
 	<script src="jquery.js"></script>
-	<script type="text/javascript" src="jquery.boilerplate.js"></script>
+	<script type="text/javascript" src="jquery.verMais.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$('.box-ver-mais').verMais();			
+			$('.box-ver-mais').verMais({
+				qtdShow: 3
+			});			
 		});		
 	</script>
 </head>
