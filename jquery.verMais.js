@@ -13,15 +13,8 @@
             classBoxes : "boxes",
             qtdShow : 5
         };
-
-    // O verdadeiro construtor do plugin
     function Plugin( element, options ) {
         this.element = element;
-
-        // jQuery tem um método 'extend' que mescla o conteúdo de dois ou
-    // mais objetos, armazenando o resultado no primeiro objeto. O primeiro
-    // objeto geralmente é vazio já que não queremos alterar os valores 
-    // padrão para futuras instâncias do plugin
         this.options = $.extend( {}, defaults, options);        
         this._defaults = defaults;
         this._name = pluginName;        
@@ -29,17 +22,16 @@
     }
 
     Plugin.prototype.init = function () {
-    // Coloque a lógica de inicialização aqui
-    // Você já possui acesso ao elemento do DOM e as opções da instância
-    // exemplo: this.element e this.options    
-    
+    //inicio todos os boxes escondidos
     $("."+this.options.classBoxes+"").hide();
+    //so mostro a quantidade de boxes escolhida
     $("."+this.options.classBoxes+"").slice(0 , this.options.qtdShow).show();
-    
     var boxes = this.options.classBoxes;
     var qtdTotal = this.options.qtdShow;
     var clicks = 0;
+    //pego o total de boxes existentes
     var totalBoxes = $("."+this.options.classBoxes+"").length;
+    //divido esse total pelo numero de exibidos para saber quantos cliques devo dar
     var allClicks = Math.floor(totalBoxes/this.options.qtdShow);
     allClicks = ((totalBoxes%this.options.qtdShow == 0) ? allClicks - 1 : allClicks);    
     var start = this.options.qtdShow;
@@ -60,9 +52,6 @@
      end += qtdTotal
       });
     };
-
-    // Um invólucro realmente leve em torno do construtor,
-  // prevenindo contra criação de múltiplas instâncias
     $.fn[pluginName] = function ( options ) {
         return this.each(function () {
             if (!$.data(this, 'plugin_' + pluginName)) {
