@@ -33,7 +33,9 @@
     var totalBoxes = $("."+this.options.classBoxes+"").length;
     //divido esse total pelo numero de exibidos para saber quantos cliques devo dar
     var allClicks = Math.floor(totalBoxes/this.options.qtdShow);
+    //verifico se a divisao do total pelo num de exibido e resto 0, se for devo dar um clique a menos
     allClicks = ((totalBoxes%this.options.qtdShow == 0) ? allClicks - 1 : allClicks);    
+    //variaves para mostrar os itens 
     var start = this.options.qtdShow;
     var end = start + this.options.qtdShow;
     var link = this.options.classLink;
