@@ -1,4 +1,7 @@
-pluginVerMais
+Plugin verMais
 =============
 
-Serve para exibir determinado numeros de itens e desaparecer o link de ver mais quando nao mais tiver itens a serem exibidos
+Plugin criado para exibir determinado número (qtdShow) de itens (boxes), escondendo o restante e só mostrando através do clique no link (classLink). Quando acabar todos os itens o link é escondido.
+
+Contribuições: Hugo Vasconcelos e Giovanni Keppelen
+Agradecimentos: jQuery Boilerplate

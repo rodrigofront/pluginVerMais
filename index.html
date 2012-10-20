@@ -10,12 +10,11 @@
 		$(document).ready(function(){
 			$('.box-ver-mais').verMais({
 				//Coloque qual nome da sua class do link ver mais
-				//classLink: "ver-mais"
+				classLink: "ver-mais", //default ver-mais
 				//Coloque qual nome da sua class dos Itens
-				//classBoxes: "boxes"
+				classBoxes: "boxes", // default boxes
 				//Coloque quantos itens deseja exibir
-				//qtdShow: 3
-
+				qtdShow: 11 //default 5
 			});			
 		});		
 	</script>
@@ -44,7 +43,7 @@
 		<div class="boxes"></div>
 		<div class="boxes"></div>
 		<div class="boxes"></div>
-		<a class="ver-mais" href="#">Ver mais</a>
+		<div><a class="ver-mais" href="#">Ver mais</a></div>	
 	</div>
 </body>
 </html>
