@@ -2,7 +2,6 @@
  *  Project: Plugin Ver Mais    
  *  Description: Plugin para exibir determinado numero de boxes atraves de um link 
  *  Author: Rodrigo Nogueira
- *  License: 
  */
 
 ;(function ( $, window, undefined ) {
